@@ -13,20 +13,26 @@ sourceOverrides = haskell.lib.packageSourceOverrides {
     ascii-numbers = ./ascii-numbers;
 };
 
+depOverrides = new: old: {
+    ascii-case = new.callPackage ./nix/ascii-case-1.0.1.0.nix {};
+    ascii-caseless = new.callPackage ./nix/ascii-caseless-0.0.0.0.nix {};
+    ascii-superset = new.callPackage ./nix/ascii-superset-1.1.0.0.nix {};
+};
+
 ghc."8.10" = nixos-22-05.haskell.packages.ghc8107.override (old: {
     overrides = combineOverrides old [ sourceOverrides ];
 });
 
 ghc."9.0" = nixos-22-11.haskell.packages.ghc90.override (old: {
-    overrides = combineOverrides old [ sourceOverrides ];
+    overrides = combineOverrides old [ sourceOverrides depOverrides ];
 });
 
 ghc."9.2" = nixos-22-11.haskell.packages.ghc92.override (old: {
-    overrides = combineOverrides old [ sourceOverrides ];
+    overrides = combineOverrides old [ sourceOverrides depOverrides ];
 });
 
 ghc."9.4" = nixos-22-11.haskell.packages.ghc94.override (old: {
-    overrides = combineOverrides old [ sourceOverrides ];
+    overrides = combineOverrides old [ sourceOverrides depOverrides ];
 });
 
 in
