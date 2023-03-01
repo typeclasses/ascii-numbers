@@ -19,7 +19,6 @@ module ASCII.Decimal
 
 import qualified ASCII.Char as ASCII
 import qualified ASCII.Refinement
-import ASCII.Lift (Lift (lift))
 import ASCII.Refinement (ASCII, asciiUnsafe)
 import ASCII.Superset (StringSuperset, fromChar, fromCharList, toCharListMaybe,
                        toCharMaybe)
@@ -238,17 +237,6 @@ digitNatural = fromIntegral . fromEnum
 
 digitInteger :: Digit -> Integer
 digitInteger = fromIntegral . fromEnum
-
-
----  Lift instances  ---
-
-instance DigitSuperset char => Lift Digit char
-  where
-    lift = fromDigit
-
-instance DigitStringSuperset string => Lift [Digit] string
-  where
-    lift = fromDigitList
 
 
 ---  Classes  ---

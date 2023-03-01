@@ -29,7 +29,6 @@ module ASCII.Hexadecimal
 import ASCII.Case (Case (..))
 import qualified ASCII.Char as ASCII
 import qualified ASCII.Decimal as Dec
-import ASCII.Lift (Lift (lift))
 import ASCII.Refinement (ASCII, asciiUnsafe, lift)
 import ASCII.Superset (StringSuperset, fromChar, fromCharList, toCharListMaybe,
                        toCharMaybe)
@@ -283,18 +282,6 @@ naturalD16Unsafe = toEnum . fromIntegral
 
 integerD16Unsafe :: Integer -> Word4
 integerD16Unsafe = toEnum . fromIntegral
-
-
----  Lift instances  ---
-
-instance HexCharSuperset char => Lift HexChar char
-  where
-    lift = fromHexChar
-
-instance HexStringSuperset string => Lift [HexChar] string
-  where
-    lift = fromHexCharList
-
 
 
 ---  Classes  ---

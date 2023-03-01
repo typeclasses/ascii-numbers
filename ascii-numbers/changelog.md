@@ -1,3 +1,8 @@
+### 1.2.0.0 (2023-02-28)
+
+Support `ascii-superset-1.3`. This removes the `Lift` instances, as the
+`Lift` class has been removed from `ascii-superset`.
+
 ### 1.1.0.2 (2023-01-02)
 
 Minor Cabal correction (change `extra-doc-files` to `extra-source-files`)
