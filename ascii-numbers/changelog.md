@@ -1,3 +1,7 @@
+### 1.2.0.1 (2023-06-26)
+
+Raise language to GHC2021
+
 ### 1.2.0.0 (2023-02-28)
 
 Support `ascii-superset-1.3`. This removes the `Lift` instances, as the

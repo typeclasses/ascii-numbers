@@ -3,8 +3,8 @@
 }:
 mkDerivation {
   pname = "ascii-superset";
-  version = "1.1.0.0";
-  sha256 = "2b5b21f603933af5ae80db90e4cca96b9f906b8909503ec3b13c038c04dce643";
+  version = "1.3.0.1";
+  sha256 = "d441ff82b6158a798bd6478e969e7c656c0895590e4f71a64c720aa3bd5b8e4d";
   libraryHaskellDepends = [
     ascii-case ascii-caseless ascii-char base bytestring hashable text
   ];
