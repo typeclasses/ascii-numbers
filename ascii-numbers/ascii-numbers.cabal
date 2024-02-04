@@ -68,7 +68,7 @@ test-suite test-ascii-numbers
 
     build-depends:
       , ascii-numbers
-      , hedgehog ^>= 1.1.2 || ^>= 1.2
+      , hedgehog >= 1.1.2 && < 1.5
       , invert ^>= 1.0
 
     default-extensions:
