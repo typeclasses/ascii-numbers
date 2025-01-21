@@ -3,10 +3,8 @@
 }:
 mkDerivation {
   pname = "invert";
-  version = "1.0.0.3";
-  sha256 = "c4dbebd294ebf538fbbf88b550f4f63991c4273ec1b16273a57309b06fb27321";
-  revision = "1";
-  editedCabalFile = "09nnrz9s2gqzm0v5pm03frcspdw7ggk9a9ardnia311kz6qb0v87";
+  version = "1.0.0.5";
+  sha256 = "0b32de953c5e7bdf5771becd910f415c8b03ff407176fcfe233a36e9441c819e";
   libraryHaskellDepends = [
     base containers generic-deriving hashable unordered-containers
     vector
